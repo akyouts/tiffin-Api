@@ -1,22 +1,19 @@
-import { Column, Entity, PrimaryColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
 
 
-@Entity('tiffin_list')
-export class tiffin_list{
-    @PrimaryColumn('uuid')
-    id:string
-
-    @Column()
-    User:string
-
-    @Column()
-    Date:Date
+@Entity('Customer')
+export class tiffin_list extends BaseEntity {
+    
+    @PrimaryColumn()
+    PhoneNumber:Number
     
     @Column()
-    Food:string
+    Name:string
 
     @Column()
-    Amt:Number
+    Address:string
+
+    
     
 
 }

@@ -1,5 +1,6 @@
-import { BaseEntity, Column, PrimaryColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
 
+@Entity('Customer')
 export class Customer extends BaseEntity{
 
     @PrimaryColumn('uuid')
@@ -7,7 +8,6 @@ export class Customer extends BaseEntity{
     
     @Column({
         unique:true,
-        length:10
     })
     phoneNumber:Number
 
