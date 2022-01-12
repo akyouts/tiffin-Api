@@ -3,14 +3,13 @@ import { IsNotEmpty } from "class-validator"
 export class CustomerDto{
 
     @IsNotEmpty()
-    phoneNumber:Number
+    phoneNumber:string
     
     @IsNotEmpty()
     name:string
     
     @IsNotEmpty()
-    Address:string
+    address:string
     
-    @IsNotEmpty()
     tiffinProviderid:string
 }

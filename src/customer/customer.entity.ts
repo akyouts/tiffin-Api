@@ -1,23 +1,26 @@
-import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('Customer')
 export class Customer extends BaseEntity{
 
-    @PrimaryColumn('uuid')
+    @PrimaryGeneratedColumn('uuid')
     id:string
     
     @Column({
         unique:true,
     })
-    phoneNumber:Number
+    phoneNumber:string
 
     @Column()
     name:string
 
     @Column()
-    Address:string
+    address:string
 
-    @Column()
+    @Column({
+        // This is will get removed when provider side features is complete
+        nullable: true
+    })
     providerId:string
 
 
